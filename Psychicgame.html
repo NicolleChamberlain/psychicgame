@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Psychic Game</title>
+</head>
+
+<body>
+
+    <h1>The Psychic Game</h1>
+
+    <p id="directions-text">Guess What Letter I'm Thinking Of...</p>
+    <div id="wins-count"></div>
+    <div id="loss-count"></div>
+    <div id="guesses-left-count"> </div>
+    <div id="letters-guessed"></div>
+
+
+
+    <script type="text/javascript">
+
+        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x,", "y", "z"];
+        var playerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x,", "y", "z"];
+
+
+        var computerGuess = computerChoices[Math.floor(Math.random() * 26)]
+        var userGuess = ''
+            console.log(computerGuess)
+
+        document.onkeyup = function () {
+            userGuess = String.fromCharCode(event.keyCode).toLowerCase()
+            console.log(userGuess)
+        }
+
+        var winsCount = 0;
+        var losesCount = 0;
+        var guessesleftCount = 8;
+        var lettersGuessed = "";
+
+        document.write(`Wins: <br> Loses: <br> Guesses Left:${guessesleftCount} <br> Letters Guessed:`);
+//if computer letter is the same as the players letter then wins count goes up by one 
+        if(computerGuess === userGuess){
+            winsCount++ 
+//if player does not guess right guesses left count goes down           
+         } 
+         else(guessesleftCount--)
+         console.log(guessesleftCount);
+//if guesses left count goes to 0 player loses
+
+//letters guessed
+      document.onkeyup = function () {
+       $("#letters-guessed").append("");
+      console.log(lettersGuessed)
+      
+      }
+
+
+//game resets--->computer picks new letter--->vars set to 0--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
